@@ -1,0 +1,61 @@
+.contacts {
+  padding: 20px 0 0 0;
+
+  @media screen and (min-width: $bp-desktop) {
+    padding: 48px 0 96px 0;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+
+    @media screen and (min-width: $bp-desktop) {
+      flex-direction: row;
+      justify-content: center;
+      gap: 32px;
+    }
+  }
+
+  &__map {
+    border: none;
+    flex-shrink: 0;
+    flex-grow: 1;
+    border-radius: 0;
+    width: 100%;
+    height: 232px;
+    margin: 0 -20px;
+
+    @media screen and (min-width: $bp-mobile) {
+      height: 480px;
+      margin: 0;
+      max-width: 600px;
+      border-radius: 32px;
+    }
+  }
+
+  &__card {
+    max-width: 423px;
+    background-color: var(--color-primary-dark);
+    padding: 42px 24px;
+    border-radius: 32px;
+
+    @media screen and (min-width: $bp-tablet) {
+      padding: 48px 56px;
+    }
+  }
+
+  &__form {
+    gap: 32px;
+  }
+
+  &__form-body {
+    gap: 16px;
+  }
+
+  &__form-write {
+    gap: 8px;
+  }
+}

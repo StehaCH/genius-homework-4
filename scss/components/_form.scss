@@ -1,0 +1,125 @@
+.form {
+  width: 100%;
+  max-width: 272px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--color-primary-white);
+
+  @media screen and (min-width: $bp-tablet) {
+    max-width: 310px;
+  }
+  /*gap: 32px;*/
+
+  &__title {
+    margin-bottom: 0;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 22px;
+    font-weight: 700;
+
+    @media screen and (min-width: $bp-tablet) {
+      max-width: 274px;
+    }
+  }
+
+  &__title_light {
+    color: var(--color-primary-light);
+  }
+
+  &__body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*gap: 24px;*/
+  }
+
+  &__field {
+    width: 100%;
+  }
+
+  &__label {
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: 400;
+  }
+  &__input {
+    padding: 16px 24px;
+    border-radius: 32px;
+    border: 2px solid var(--color-secondary-lightgrey);
+    background-color: transparent;
+    width: 100%;
+
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.1;
+    color: var(--color-primary-white);
+
+    @media screen and (min-width: $bp-tablet) {
+      padding: 16px 32px;
+    }
+  }
+
+  &__input:focus {
+    background-color: var(--color-secondary-lightgrey);
+    outline: none;
+  }
+
+  &__input::placeholder {
+    font-family: Roboto;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.15;
+    color: var(--color-primary-white);
+  }
+
+  &__write {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 240px;
+    /*gap: 8px;*/
+
+    @media screen and (min-width: $bp-tablet) {
+      max-width: 280px;
+    }
+  }
+
+  &__button {
+    font-size: 16px;
+    line-height: normal;
+    padding: 15px 31px;
+    margin-bottom: 0;
+  }
+
+  &__button:hover {
+    color: var(--color-primary-white);
+  }
+
+  &__button[disabled] {
+    background-color: var(--color-secondary-lightgrey);
+    border-color: var(--color-secondary-darkgrey);
+    color: var(--color-secondary-darkgrey);
+    cursor: not-allowed;
+  }
+
+  &__text {
+    margin-bottom: 0;
+    color: var(--color-secondary-lightgrey);
+    text-align: center;
+    font-family: Roboto;
+    font-size: 12px;
+
+    font-weight: 400;
+    line-height: 1.5; /* 150% */
+    max-width: 213px;
+  }
+
+  &__link {
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,110 @@
+.backdrop {
+  padding: 20px 16px;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(1, 31, 74, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s, visibility 0.3s;
+
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+.modal {
+  position: relative;
+  width: 100%;
+  max-width: 723px;
+
+  border-radius: 48px;
+  background-color: var(--color-primary-dark);
+  color: var(--color-primary-white);
+  padding: 32px 24px;
+  overflow: auto;
+
+  @media screen and (min-width: $bp-tablet) {
+    padding: 36px 60px;
+    height: 100%;
+    max-height: 681px;
+  }
+
+  @media screen and (min-width: $bp-desktop) {
+    padding: 42px 144px;
+  }
+
+  &__btn-close {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (min-width: $bp-tablet) {
+      right: 42px;
+      top: 42px;
+    }
+  }
+
+  &__close-icon {
+    fill: var(--color-primary-white);
+  }
+
+  &__wrap {
+    color: var(--color-primary-white);
+    width: 100%;
+    font-style: normal;
+    line-height: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    @media screen and (min-width: $bp-tablet) {
+      gap: 40px;
+    }
+  }
+
+  &__header {
+    margin-bottom: 0;
+    text-align: center;
+    font-family: Play;
+    font-size: 32px;
+    font-weight: 700;
+    max-width: 435px;
+    display: none;
+
+    @media screen and (min-width: $bp-mobile) {
+      display: block;
+    }
+
+    @media screen and (min-width: $bp-tablet) {
+      font-size: 64px;
+    }
+  }
+
+  &__form {
+    gap: 32px;
+  }
+
+  &__form-body {
+    gap: 24px;
+  }
+
+  &__form-write {
+    gap: 8px;
+  }
+}

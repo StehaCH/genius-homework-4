@@ -1,0 +1,54 @@
+.button {
+  background-color: var(--color-primary-light);
+  color: var(--color-primary-white);
+  border: 2px solid var(--color-primary-light);
+  display: block;
+  border-radius: 32px;
+  font-size: 16px;
+  line-height: 1.18;
+  font-weight: 700;
+  padding: 16px 24px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+
+  @media screen and (min-width: $bp-tablet) {
+    margin: 0 0 14px 0;
+    font-size: 18px;
+    line-height: 1.17;
+    padding: 16px 32px;
+  }
+}
+
+.button:hover {
+  background-color: transparent;
+  color: var(--color-primary-dark);
+}
+
+.carousel-btn {
+  width: 36px;
+  height: 36px;
+  background-color: var(--color-primary-white);
+  border: 1px solid var(--color-primary-dark);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: var(--color-primary-dark);
+  cursor: pointer;
+  transition: background-color 0.2s, border 0.2s, fill 0.2s;
+
+  @media screen and (min-width: $bp-desktop) {
+    width: 44px;
+    height: 44px;
+  }
+
+  &.next {
+    transform: rotate(180deg);
+  }
+
+  &:hover {
+    background-color: var(--color-primary-light);
+    border: 1px solid var(--color-primary-light);
+    fill: var(--color-primary-white);
+  }
+}
